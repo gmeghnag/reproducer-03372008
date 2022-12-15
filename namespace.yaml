@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: reproducer-03372008
+  annotations:
+    operator.tekton.dev/prune.keep-since: "7200"
+    operator.tekton.dev/prune.resources: taskrun, pipelinerun
+    operator.tekton.dev/prune.schedule: "* * * * *"    # Tell the operator to prune the resources every 24 hours 
+    operator.tekton.dev/prune.strategy: keep-since     # Tell the operator to use the keep-since strategy
