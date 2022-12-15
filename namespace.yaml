@@ -5,5 +5,5 @@ metadata:
   annotations:
     operator.tekton.dev/prune.keep-since: "2"
     operator.tekton.dev/prune.resources: taskrun, pipelinerun
-    operator.tekton.dev/prune.schedule: "* * * * *"    # Tell the operator to prune the resources every 24 hours 
+    operator.tekton.dev/prune.schedule: "* * * * *"    # Tell the operator to prune the resources every minute (test-only, increase the elapsed time in production)
     operator.tekton.dev/prune.strategy: keep-since     # Tell the operator to use the keep-since strategy
