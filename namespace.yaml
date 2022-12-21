@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: reproducer-03372008
   annotations:
-    operator.tekton.dev/prune.keep-since: "120"
+    operator.tekton.dev/prune.keep-since: "2"
     operator.tekton.dev/prune.resources: taskrun, pipelinerun
     operator.tekton.dev/prune.schedule: "*/2 * * * *"    # Tell the operator to prune the resources every two (test-only, increase the elapsed time in production)
     operator.tekton.dev/prune.strategy: keep-since     # Tell the operator to use the keep-since strategy
